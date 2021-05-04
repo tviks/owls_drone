@@ -7,6 +7,8 @@
 
 ## Отключение пароля администратора
 
-  sudo visudo
+    sudo visudo
+    
 добавляем в коней файла
-  $USER ALL=(ALL) NOPASSWD: ALL
+
+    $USER ALL=(ALL) NOPASSWD: ALL
