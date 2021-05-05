@@ -20,3 +20,7 @@
 udev
 
     sudo cp 99-px4fmu.rules /lib/udev/rules.d
+    
+slam error 
+
+    https://github.com/IntelRealSense/realsense-ros/issues/749#issuecomment-532968059
