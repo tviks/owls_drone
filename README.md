@@ -27,6 +27,12 @@ udev
 
     sudo cp 99-px4fmu.rules /lib/udev/rules.d
     
+CUDA
+
+    # cuda 10.2
+    export CUDA_HOME=/usr/local/cuda
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64
+    
 slam error 
 
    [LINK](https://github.com/IntelRealSense/realsense-ros/issues/749#issuecomment-532968059)
