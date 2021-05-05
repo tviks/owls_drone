@@ -11,7 +11,7 @@
     
 добавляем в коней файла
 
-    $USER ALL=(ALL) NOPASSWD: ALL
+    owls ALL=(ALL) NOPASSWD: ALL
     
 ## Заметки
 
