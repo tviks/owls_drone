@@ -15,6 +15,10 @@
     
     owls    ALL=(ALL) NOPASSWD: ALL
     
+## Swap resize 
+
+[LINK](https://bogdancornianu.com/change-swap-size-in-ubuntu/)
+    
 ## Заметки
 
     <arg name="gcs_url" default="udp://0.0.0.0:14550@192.168.31.23:14550" />
