@@ -11,6 +11,8 @@
     
 добавляем в коней файла
 
+    root    ALL=(ALL:ALL) NOPASSWD: ALL
+    
     owls ALL=(ALL) NOPASSWD: ALL
     
 ## Заметки
