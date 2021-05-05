@@ -12,3 +12,7 @@
 добавляем в коней файла
 
     $USER ALL=(ALL) NOPASSWD: ALL
+    
+## Заметки
+
+    <arg name="gcs_url" default="udp://0.0.0.0:14550@192.168.31.23:14550" />
