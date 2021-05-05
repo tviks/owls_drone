@@ -13,7 +13,7 @@
 
     root    ALL=(ALL:ALL) NOPASSWD: ALL
     
-    owls ALL=(ALL) NOPASSWD: ALL
+    owls    ALL=(ALL) NOPASSWD: ALL
     
 ## Заметки
 
