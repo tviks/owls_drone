@@ -1,0 +1,29 @@
+<<?xml version="1.0"?>
+<launch>
+    <arg name="mavros" default="true"/>
+    <arg name="realsense" default="true"/>
+    <arg name="camera" default="true"/>
+    <arg name="rangefinder_vl53l1x" default="true"/>
+    <arg name="web_video_server" default="true"/>
+
+
+
+
+    <include file="$(find owls_drone)/launch/mavros.launch" />
+
+    <include file="$(find px4_realsense_bridge)/launch/bridge.launch" if="$(arg realsense)"/>
+
+    <include file="$(find owls_drone)/launch/camera.launch" if="$(arg camera)" />
+
+    <node name="rangefinder" pkg="vl53l1x" type="vl53l1x_node" output="screen" if="$(eval rangefinder_vl53l1x and not simulator)">
+        <param name="frame_id" value="rangefinder"/>
+        <param name="min_signal" value="0.4"/>
+        <param name="pass_statuses" type="yaml" value="[0, 6, 7, 11]"/>
+    </node>
+
+    <node name="web_video_server" pkg="web_video_server" type="web_video_server" if="$(arg web_video_server)" required="false" respawn="true" respawn_delay="5">
+        <param name="default_stream_type" value="ros_compressed"/>
+        <param name="publish_rate" value="1.0"/>
+    </node>
+    
+</launch>
