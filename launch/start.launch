@@ -4,7 +4,9 @@
     <arg name="realsense" default="true"/>
     <arg name="camera" default="true"/>
     <arg name="rangefinder_vl53l1x" default="true"/>
+    <arg name="rosbridge" default="true"/>
     <arg name="web_video_server" default="true"/>
+    <arg name="zbar" default="false"/>
 
 
 
@@ -15,7 +17,13 @@
 
     <include file="$(find owls_drone)/launch/camera.launch" if="$(arg camera)" />
 
-    <node name="rangefinder" pkg="vl53l1x" type="vl53l1x_node" output="screen" if="$(eval rangefinder_vl53l1x and not simulator)">
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" if="$(arg rosbridge)"/>
+
+    <include file="$(find owls_drone)/launch/zbar.launch" />
+
+    
+
+    <node name="rangefinder" pkg="vl53l1x" type="vl53l1x_node" output="screen" if="$(arg rangefinder_vl53l1x)">
         <param name="frame_id" value="rangefinder"/>
         <param name="min_signal" value="0.4"/>
         <param name="pass_statuses" type="yaml" value="[0, 6, 7, 11]"/>
