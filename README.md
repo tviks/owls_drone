@@ -4,6 +4,10 @@
 
 -  [VIO](https://github.com/Auterion/VIO)
 -  [librealsense_jetson](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md)
+-  [zbar](https://github.com/ros-drivers/zbar_ros)
+-  [ros_camera_jetson](https://github.com/sfalexrog/jetson_camera)
+-  [mavros](https://github.com/mavlink/mavros)
+
 
 ## Отключение пароля администратора
 
