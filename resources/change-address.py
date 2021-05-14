@@ -25,40 +25,40 @@ GPIO.setup(pin3, GPIO.OUT)
 GPIO.setup(pin4, GPIO.OUT)
 GPIO.setup(pin5, GPIO.OUT)
     
-GPIO.output(pin1, GPIO.HIGH)
-GPIO.output(pin2, GPIO.HIGH)
-GPIO.output(pin3, GPIO.HIGH)
-GPIO.output(pin4, GPIO.HIGH)
-GPIO.output(pin5, GPIO.HIGH)
-
-
 GPIO.output(pin1, GPIO.LOW)
-time.sleep(500)
-tof = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
-tof.open()
-tof.change_address(addr_1)
-tof.close()
-
 GPIO.output(pin2, GPIO.LOW)
-time.sleep(500)
-tof = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
-tof.open()
-tof.change_address(addr_2)
-tof.close()
-
 GPIO.output(pin3, GPIO.LOW)
-time.sleep(500)
-tof = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
-tof.open()
-tof.change_address(addr_3)
-tof.close()
-
 GPIO.output(pin4, GPIO.LOW)
-time.sleep(500)
-tof = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
-tof.open()
-tof.change_address(addr_4)
-tof.close()
-
-
 GPIO.output(pin5, GPIO.LOW)
+
+
+GPIO.output(pin1, GPIO.HIGH)
+time.sleep(1)
+tof1 = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
+tof1.open()
+tof1.change_address(addr_1)
+tof1.close()
+
+GPIO.output(pin2, GPIO.HIGH)
+time.sleep(1)
+tof2 = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
+tof2.open()
+tof2.change_address(addr_2)
+tof2.close()
+
+GPIO.output(pin3, GPIO.HIGH)
+time.sleep(1)
+tof3 = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
+tof3.open()
+tof3.change_address(addr_3)
+tof3.close()
+
+GPIO.output(pin4, GPIO.HIGH)
+time.sleep(1)
+tof4 = VL53L1X.VL53L1X(i2c_bus=1, i2c_address=addr_current)
+tof4.open()
+tof4.change_address(addr_4)
+tof4.close()
+
+
+GPIO.output(pin5, GPIO.HIGH)
