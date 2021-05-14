@@ -1,20 +1,25 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>owls_drone</name>
-  <version>1.0.0</version>
-  <description></description>
+  <version>0.0.1</version>
+  <description>The owls_drone package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="tviks879@gmail.com">OWLS</maintainer>
+  <maintainer email="tviks879@gmail.com">Sergey Berstnev</maintainer>
 
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
   <license>TODO</license>
+
 
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-  <url type="repository">https://github.com/tviks/owls_drone_dev</url>
+  <!-- <url type="website">http://wiki.ros.org/owls_drone</url> -->
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
@@ -22,10 +27,6 @@
   <!-- Example: -->
   <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
 
-    <depend>roscpp</depend>
-    <depend>sensor_msgs</depend>
-    <depend>message_generation</depend>
-    <depend>message_runtime</depend>
 
   <!-- The *depend tags are used to specify dependencies -->
   <!-- Dependencies can be catkin packages or system dependencies -->

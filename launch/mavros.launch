@@ -1,14 +1,18 @@
-<<?xml version="1.0"?>
+<?xml version="1.0"?>
 <launch>
     <arg name="ns" default="/"/>
     <arg name="fcu_url" default="/dev/px4fmu" />
     <arg name="gcs_url" default="udp://0.0.0.0:14550@192.168.31.23:14550" />
+    <arg name="tgt_system" default="1" />
+    <arg name="tgt_component" default="1" />
+
+    <arg name="distance_sensor_remap" default="rangefinder/range"/>
 
     <group ns="$(arg ns)">
       <include file="$(find mavros)/launch/node.launch">
           <arg name="pluginlists_yaml" value="$(find mavros)/launch/px4_pluginlists.yaml" />
           <!-- Need to change the config file to get the tf topic and get local position in terms of local origin -->
-          <arg name="config_yaml" value="$(find px4_realsense_bridge)/resource/px4_config.yaml" />
+          <arg name="config_yaml" value="$(find owls_drone)/launch/yaml/px4_config.yaml" />
           <arg name="fcu_url" value="$(arg fcu_url)" />
           <arg name="gcs_url" value="$(arg gcs_url)" />
           <arg name="tgt_system" value="$(arg tgt_system)" />
